@@ -223,7 +223,11 @@ onMounted(() => {
   // Animate stats numbers
   statNumbers.value.forEach((element: any, index: number) => {
     const stat = stats.value[index]
+<<<<<<< HEAD
     if (stat && element) {
+=======
+    if (stat) {
+>>>>>>> 41d97cb98f01823ae0c70dd05801d9da79fbd138
       gsap.to(element, {
         innerHTML: stat.prefix + stat.value + stat.suffix,
         duration: 2,
