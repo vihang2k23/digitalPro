@@ -223,13 +223,15 @@ onMounted(() => {
   // Animate stats numbers
   statNumbers.value.forEach((element: any, index: number) => {
     const stat = stats.value[index]
-    gsap.to(element, {
-      innerHTML: stat.prefix + stat.value + stat.suffix,
-      duration: 2,
-      delay: index * 0.2,
-      ease: "power2.out",
-      snap: { innerHTML: 1 }
-    })
+    if (stat) {
+      gsap.to(element, {
+        innerHTML: stat.prefix + stat.value + stat.suffix,
+        duration: 2,
+        delay: index * 0.2,
+        ease: "power2.out",
+        snap: { innerHTML: 1 }
+      })
+    }
   })
 
   // Animate team cards
